@@ -1,7 +1,7 @@
 package fr.xebia.xke.solid.isp.metier;
 
 
-import fr.xebia.xke.solid.isp.model.Order;
+import fr.xebia.xke.solid.isp.model.Billing;
 
 import java.math.BigDecimal;
 
@@ -10,8 +10,7 @@ import java.math.BigDecimal;
  */
 public class BillingService {
 
-    public String writeBill(Order order) {
-
+    public String writeBill(Billing order) {
         BigDecimal amount = order.getUnitPrice().multiply(BigDecimal.valueOf(order.getQuantity()));
         return order.getBillingAddress() + " must pay " + amount + " euros";
     }

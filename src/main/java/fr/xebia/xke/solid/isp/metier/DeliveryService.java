@@ -8,11 +8,7 @@ import fr.xebia.xke.solid.isp.model.Order;
  */
 public class DeliveryService {
 
-
     public String processOrder(Order order) {
-
-
         return "send " + order.getQuantity() + " " + order.getReferenceItem() + " to " + order.getDeliveryAddress();
-
     }
 }

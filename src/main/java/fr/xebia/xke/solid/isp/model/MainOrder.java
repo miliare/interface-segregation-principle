@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 /**
  * Created by sbuisson on 14/06/2015.
  */
-public class MainOrder implements Order {
+public class MainOrder implements Billing {
 
     private String referenceItem;
     private int quantity;

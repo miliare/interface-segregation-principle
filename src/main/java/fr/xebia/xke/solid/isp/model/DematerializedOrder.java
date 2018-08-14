@@ -7,12 +7,11 @@ import java.math.BigDecimal;
 /**
  * Created by sbuisson on 19/06/2015.
  */
-public class DematerialisedOrder implements Order {
+public class DematerializedOrder implements Billing {
 
     private String referenceItem;
     private String billingAddress;
-    private BigDecimal prixUnitaire;
-
+    private BigDecimal unitPrice;
 
     public String getDeliveryAddress() {
         throw new NotImplementedException();
@@ -47,14 +46,14 @@ public class DematerialisedOrder implements Order {
     }
 
     public BigDecimal getAmount() {
-        return prixUnitaire;
+        return unitPrice;
     }
 
     public BigDecimal getUnitPrice() {
-        return prixUnitaire;
+        return unitPrice;
     }
 
-    public void setUnitPrice(BigDecimal prixUnitaire) {
-        this.prixUnitaire = prixUnitaire;
+    public void setUnitPrice(BigDecimal unitPrice) {
+        this.unitPrice = unitPrice;
     }
 }
