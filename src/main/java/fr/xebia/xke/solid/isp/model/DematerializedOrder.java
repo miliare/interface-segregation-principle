@@ -9,17 +9,8 @@ import java.math.BigDecimal;
  */
 public class DematerializedOrder implements Billing {
 
-    private String referenceItem;
     private String billingAddress;
     private BigDecimal unitPrice;
-
-    public String getDeliveryAddress() {
-        throw new NotImplementedException();
-    }
-
-    public void setDeliveryAddress(String deliveryAddress) {
-        throw new NotImplementedException();
-    }
 
     public int getQuantity() {
         return 1;
@@ -29,12 +20,12 @@ public class DematerializedOrder implements Billing {
         throw new NotImplementedException();
     }
 
-    public String getReferenceItem() {
-        return referenceItem;
+    public BigDecimal getUnitPrice() {
+        return unitPrice;
     }
 
-    public void setReferenceItem(String referenceItem) {
-        this.referenceItem = referenceItem;
+    public void setUnitPrice(BigDecimal unitPrice) {
+        this.unitPrice = unitPrice;
     }
 
     public String getBillingAddress() {
@@ -43,17 +34,5 @@ public class DematerializedOrder implements Billing {
 
     public void setBillingAddress(String billingAddress) {
         this.billingAddress = billingAddress;
-    }
-
-    public BigDecimal getAmount() {
-        return unitPrice;
-    }
-
-    public BigDecimal getUnitPrice() {
-        return unitPrice;
-    }
-
-    public void setUnitPrice(BigDecimal unitPrice) {
-        this.unitPrice = unitPrice;
     }
 }

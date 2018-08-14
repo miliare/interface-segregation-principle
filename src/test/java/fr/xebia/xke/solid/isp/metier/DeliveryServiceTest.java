@@ -1,6 +1,7 @@
 package fr.xebia.xke.solid.isp.metier;
 
 
+import fr.xebia.xke.solid.isp.model.Deliverable;
 import fr.xebia.xke.solid.isp.model.FreeOrder;
 import fr.xebia.xke.solid.isp.model.MainOrder;
 import org.junit.Before;
@@ -10,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 
 public class DeliveryServiceTest {
 
-    DeliveryService deliveryService;
+    private DeliveryService deliveryService;
 
     @Before
     public void setUp() {
@@ -21,17 +22,16 @@ public class DeliveryServiceTest {
     public void shouldDeliverOrderOfPonyToHaussman() {
 
         //Given
-        MainOrder order = new MainOrder();
+        Deliverable order = new MainOrder();
         order.setReferenceItem("Pony");
         order.setQuantity(3);
         order.setDeliveryAddress("156 Bd Haussman");
 
-
         //When
-        //  String actual = deliveryService.processOrder(order);
+        String actual = deliveryService.processOrder(order);
 
         //Assert
-        // assertEquals("send 3 Pony to 156 Bd Haussman", actual);
+        assertEquals("send 3 Pony to 156 Bd Haussman", actual);
     }
 
 

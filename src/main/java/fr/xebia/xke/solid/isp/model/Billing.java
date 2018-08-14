@@ -6,11 +6,11 @@ public interface Billing {
 
     String getBillingAddress();
 
-    void setBillingAddress(String facturationAddress);
+    void setBillingAddress(String billingAddress);
 
     BigDecimal getUnitPrice();
 
-    void setUnitPrice(BigDecimal prixUnitaire);
+    void setUnitPrice(BigDecimal unitPrice);
 
     int getQuantity();
 
